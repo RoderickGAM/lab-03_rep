@@ -75,7 +75,7 @@ In wide data, there are more columns than rows, and for long data vice versa.
 
 
 Is the format `staff` data *wide* or *long*?
-
+wide
 
 How many observations are there in the data set?
 11.
