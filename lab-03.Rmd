@@ -72,6 +72,7 @@ staff <- read_csv("data/instructional-staff.csv")
 
 What is the difference between *wide format* data and *long format* data?
 In wide data, there are more columns than rows, and for long data vice versa.
+For wide data there is repetition of values within a column.
 
 
 Is the format `staff` data *wide* or *long*?
