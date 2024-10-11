@@ -1,6 +1,6 @@
 ---
 title: "Lab 03 - Take a sad plot and make it better"
-author: "Roderick, Mark, Ross, Alex, User5, User6 - Team Name"
+author: "Roderick, Mark, Ross, Alex,User5, User6 - Team Name"
 date: "`r Sys.Date()`"
 output: html_document
 ---
@@ -71,6 +71,7 @@ staff <- read_csv("data/instructional-staff.csv")
 ## Exercise 1
 
 What is the difference between *wide format* data and *long format* data?
+In wide data, there are more columns than rows, and for long data vice versa.
 
 
 Is the format `staff` data *wide* or *long*?
