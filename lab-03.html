@@ -396,20 +396,30 @@ library(ggplot2)</code></pre>
 format</em> data? In wide data, there are more columns than rows, and
 for long data vice versa. For wide data there is repetition of values
 within a column.</p>
-<p>Is the format <code>staff</code> data <em>wide</em> or
-<em>long</em>?</p>
+<p>Is the format <code>staff</code> data <em>wide</em> or <em>long</em>?
+wide</p>
 <p>How many observations are there in the data set? 11.</p>
 </div>
 <div id="exercise-2" class="section level2">
 <h2>Exercise 2</h2>
 <pre class="r"><code>## Uncomment and complete the following code
 
-#staff_long &lt;- ___ %&gt;%
-#  ___(
-#    cols = ____, 
-#    names_to = &quot;_____&quot;,
-#    values_to = &quot;percent&quot;
-#    )</code></pre>
+staff_long &lt;- staff %&gt;%
+  pivot_longer(
+    cols = faculty_type, 
+    names_to = &quot;years&quot;,
+    values_to = &quot;percent&quot;
+    )
+print(staff_long)</code></pre>
+<pre><code>## # A tibble: 5 × 13
+##   `1975` `1989` `1993` `1995` `1999` `2001` `2003` `2005` `2007` `2009` `2011`
+##    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+## 1   29     27.6   25     24.8   21.8   20.3   19.3   17.8   17.2   16.8   16.7
+## 2   16.1   11.4   10.2    9.6    8.9    9.2    8.8    8.2    8      7.6    7.4
+## 3   10.3   14.1   13.6   13.6   15.2   15.5   15     14.8   14.9   15.1   15.4
+## 4   24     30.4   33.1   33.2   35.5   36     37     39.3   40.5   41.1   41.3
+## 5   20.5   16.5   18.1   18.8   18.7   19     20     19.9   19.5   19.4   19.3
+## # ℹ 2 more variables: years &lt;chr&gt;, percent &lt;chr&gt;</code></pre>
 </div>
 <div id="exercise-3" class="section level2">
 <h2>Exercise 3</h2>
